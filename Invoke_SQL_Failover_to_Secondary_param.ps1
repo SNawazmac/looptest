@@ -1,4 +1,4 @@
-﻿param(
+param(
 [Parameter(Mandatory=$true)][string]$resource_group_name,              #Enter the name of resource group where the secondary sql server is existing
 [Parameter(Mandatory=$true)][string]$secondary_server_name,            #Enter the secondary server name
 [Parameter(Mandatory=$true)]$failover_group_name,                      #Enter the failovergroupname
