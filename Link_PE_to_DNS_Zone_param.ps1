@@ -1,5 +1,5 @@
 param(
-[Parameter(Mandatory=$true)][string]$primary_subscription_Id,           #Enter the primary subscription Id
+#[Parameter(Mandatory=$true)][string]$primary_subscription_Id,           #Enter the primary subscription Id
 [Parameter(Mandatory=$true)][string]$secondary_subscription_Id,         #Enter the secondary subscription Id
 [Parameter(Mandatory=$true)][string]$primary_resource_group_name,       #Enter the primary resourcegroup name where the Private DNS Zone is existing
 [Parameter(Mandatory=$true)][string]$secondary_resource_group_name,     #Enter the secondary resourcegroup name where the secondary private endpoint is existing           
