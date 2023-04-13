@@ -15,12 +15,13 @@ jobs:
       with:
         creds: ${{secrets.AZURE_CREDENTIALS_Deloitte}}
         enable-AzPSSession: true   
-    - name: Invoke storage failover and set GRS
-      uses: azure/powershell@v1
-      with:
-        inlineScript: |
-          ./Invoke_Failover_Storage_multi-values_param.ps1 -resource_group_name "${{vars.STORAGEACCOUNT_RESOURCE_GROUP_NAME}}" -storageaccount_names "${{vars.STORAGEACCOUNT_NAMES}}" -sku "${{vars.SKU}}"  
-        azPSVersion: "latest"
+    # - name: Invoke storage failover and set GRS
+     #uses: azure/powershell@v1
+     #with:
+       #inlineScript: |
+        # ./Invoke_Failover_Storage_multi-values_param.ps1 -resource_group_name "${{vars.STORAGEACCOUNT_RESOURCE_GROUP_NAME}}" -storageaccount_names "${{vars.STORAGEACCOUNT_NAMES}}" -sku "${{vars.SKU}}"  
+        #azPSVersion: "latest"
+      
     - name: Link PE to Private DNS Zone
       uses: azure/powershell@v1
       with:
