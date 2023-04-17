@@ -16,7 +16,7 @@ foreach($failover_group_name in $failovergroupnames_split){
 Set-AzContext -Subscription $secondary_subscription_Id
 
 #The below command invokes failover from primary to secondary sql server in the failover group
-Switch-AzSqlDatabaseFailoverGroup -ResourceGroupName $resource_group_name -ServerName $secondary_server_name -FailoverGroupName $failover_group_name -AsJob
+Switch-AzSqlDatabaseFailoverGroup -ResourceGroupName $resource_group_name -ServerName $secondary_server_name -FailoverGroupName $failover_group_name
 
 }
 }
