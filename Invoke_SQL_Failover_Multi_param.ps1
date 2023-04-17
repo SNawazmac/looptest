@@ -6,9 +6,9 @@ param(
 )
 
 $secondaryservernames_split = $secondary_server_names.split(",")
-
-foreach($secondary_server_name in $secondaryservernames_split){
 $failovergroupnames_split = $failover_group_names.split(",")
+foreach($secondary_server_name in $secondaryservernames_split){
+
 #The below command sets authentication information for cmdlets that run in the current session
 Set-AzContext -Subscription $secondary_subscription_Id
 
