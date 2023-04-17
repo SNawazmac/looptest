@@ -8,7 +8,7 @@ param(
 $secondaryservernames_split = $secondary_server_names.split(",")
 $failovergroupnames_split = $failover_group_names.split(",")
 
-foreach($secondary_server_name in $secondaryservernames_split) & foreach($failover_group_name in $failovergroupnames_split){
+foreach($secondary_server_name in $secondaryservernames_split){
 
 #The below command sets authentication information for cmdlets that run in the current session
 Set-AzContext -Subscription $secondary_subscription_Id
@@ -16,5 +16,4 @@ Set-AzContext -Subscription $secondary_subscription_Id
 #The below command invokes failover from primary to secondary sql server in the failover group
 Switch-AzSqlDatabaseFailoverGroup -ResourceGroupName $resource_group_name -ServerName $secondary_server_name -FailoverGroupName $failover_group_name
 
-}
 }
