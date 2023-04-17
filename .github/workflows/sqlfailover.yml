@@ -16,6 +16,6 @@ jobs:
       uses: azure/powershell@v1
       with:
         inlineScript: |
-          ./Invoke_SQL_Failover_Multi_param.ps1 -resource_group_name "${{vars.SECONDARY_SERVER_RESOURCE_GROUP_NAME}}" -secondary_server_names "${{vars.SECONDARY_SERVER_NAMES}}" -failover_group_names "${{vars.FAILOVER_GROUP_NAMES}}" -secondary_subscription_Id "${{vars.SECONDARY_SUBSCRIPTION_ID_SQL}}"
-          ./Invoke_SQL_Failover_Multi_param.ps1 -resource_group_name "${{vars.SECONDARY_SERVER_RESOURCE_GROUP_NAME}}" -secondary_server_names "${{vars.SECONDARY_SERVER_NAMES2}}" -failover_group_names "${{vars.FAILOVER_GROUP_NAMES2}}" -secondary_subscription_Id "${{vars.SECONDARY_SUBSCRIPTION_ID_SQL}}"
+          ./Invoke_SQL_Failover_Multi_param.ps1 -resource_group_name "${{vars.SECONDARY_SERVER_RESOURCE_GROUP_NAME}}" -secondary_server_name "${{vars.SECONDARY_SERVER_NAMES}}" -failover_group_name "${{vars.FAILOVER_GROUP_NAMES}}" -secondary_subscription_Id "${{vars.SECONDARY_SUBSCRIPTION_ID_SQL}}"
+          ./Invoke_SQL_Failover_Multi_param.ps1 -resource_group_name "${{vars.SECONDARY_SERVER_RESOURCE_GROUP_NAME}}" -secondary_server_name "${{vars.SECONDARY_SERVER_NAMES2}}" -failover_group_name "${{vars.FAILOVER_GROUP_NAMES2}}" -secondary_subscription_Id "${{vars.SECONDARY_SUBSCRIPTION_ID_SQL}}"
         azPSVersion: "latest"
