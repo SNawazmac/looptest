@@ -12,7 +12,7 @@ jobs:
       with:
         creds: ${{secrets.AZURE_CREDENTIALS_Deloitte}}
         enable-AzPSSession: true   
-    - name: Invoke storage failover and set GRS
+    - name: Invoke sql failover
       uses: azure/powershell@v1
       with:
         inlineScript: |
