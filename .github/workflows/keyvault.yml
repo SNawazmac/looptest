@@ -18,4 +18,3 @@ jobs:
         inlineScript: |
          ./Link_Multi_PEs_to_DNS_Zone.ps1 -primary_subscription_Id "${{vars.PRIMARY_SUBSCRIPTION_ID}}" -secondary_subscription_Id "${{vars.SECONDARY_SUBSCRIPTION_ID}}" -Private_DNS_Zone_resource_group_name "${{vars.PRIVATE_DNS_ZONE_RESOURCE_GROUP_NAME}}" -secondary_resource_group_name "${{vars.SECONDARYPE_RESOURCE_GROUP_NAME}}" -secondary_private_endpoint_name "${{vars.SECONDARY_PRIVATE_ENDPOINT_NAME}}" -zone_name "${{vars.PRIVATE_DNS_ZONE_NAME}}" -Private_DNS_Zone_Group_name "${{vars.PRIVATE_DNS_ZONE_GROUP_NAME}}" 
         azPSVersion: "latest"
-   
